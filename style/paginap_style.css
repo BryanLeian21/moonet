@@ -199,10 +199,13 @@ body {
     overflow: hidden; /* Para que la imagen no se salga */
     scroll-snap-align: start; /* Alinea el inicio de la tarjeta al inicio del scroll */
     transition: transform 0.3s ease; /* Transición para efectos de hover/active */
+    position: relative; /* Crea un nuevo contexto de apilamiento */
+    z-index: 1; /* Asegura que la tarjeta esté en su propia capa */
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+    transform: translateY(-5px);
+    z-index: 2; /* Eleva la tarjeta en el orden de apilamiento al pasar el ratón */
 }
 
 .service-image {

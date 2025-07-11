@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const serviceName = modalServiceName.textContent;
             console.log(`Botón "Mas Info." del modal clickeado para: ${serviceName}.`);
             alert(`Redirigiendo a la página de detalles para "${serviceName}" (no implementada aún).`);
-            // window.location.href = `service_detail.html?service=${encodeURIComponent(serviceName)}`;
+            window.location.href = 'paginap_index.html'; // Ejemplo de redirección a una página de detalles
         });
     }
 
