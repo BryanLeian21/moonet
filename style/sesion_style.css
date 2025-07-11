@@ -1,0 +1,213 @@
+/* Variables CSS para colores (reutilizadas de la página de inicio) */
+:root {
+    --primary-purple: #6A3A9F; /* Morado oscuro principal */
+    --light-purple: #9D6ED9; /* Morado más claro para círculos */
+    --moonath-purple: #8A6FCF; /* Morado específico para elementos de texto/logo */
+    --button-bg: white;
+    --button-text: var(--primary-purple);
+    --border-color: black;
+    --text-color: #555;
+    --input-bg: white;
+    --input-border: #ccc;
+    --link-color: #e0e0e0; /* Color claro para el enlace de contraseña olvidada */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 90vh;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para los círculos decorativos (reutilizados) --- */
+.circle {
+    position: absolute;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(1px);
+    z-index: 1; /* Asegura que estén detrás del contenido principal */
+}
+
+.circle-large { width: 100px; height: 100px; }
+.circle-medium { width: 70px; height: 70px; }
+.circle-small { width: 50px; height: 50px; }
+.circle-xsmall { width: 30px; height: 30px; }
+
+/* Posicionamiento específico para cada círculo en la página de login */
+.circle-top-right { top: 3%; right: 15%; background-color: var(--primary-purple); }
+.circle-top-left { top: 12%; left: 10%; } /* Este no se ve en el wireframe de login, pero lo dejamos si acaso */
+.circle-bottom-left-corner { bottom: 3%; left: 5%; background-color: var(--primary-purple); }
+
+
+/* --- Estilos para el contenedor del formulario (el gran círculo morado) --- */
+.login-form-container {
+    position: absolute; /* Posicionamiento absoluto para el gran círculo */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    width: 90%; /* Ancho del círculo */
+    height: 90%; /* Altura del círculo, para que sea casi un círculo completo */
+    max-width: 380px; /* Limita el tamaño en pantallas grandes */
+    max-height: 380px; /* Limita el tamaño en pantallas grandes */
+    background-color: var(--primary-purple);
+    border-radius: 50%; /* Hace que sea un círculo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro del círculo */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2; /* Asegura que esté por encima de los círculos decorativos */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+}
+
+.login-title {
+    font-size: 2.5em; /* Tamaño del texto "INICIO" */
+    color: white;
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.login-form {
+    width: 80%; /* Ancho del formulario dentro del círculo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre grupos de entrada */
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea etiquetas a la izquierda */
+}
+
+.input-group label {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 25px; /* Bordes redondeados para los inputs */
+    font-size: 1em;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box; /* Incluye padding en el width */
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.forgot-password-link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 10px; /* Espacio con el input de arriba */
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Estilos para el botón de INICIO (reutiliza la clase action-button y añade login-button) */
+.action-button {
+    /* Estilos base del botón, como en la página de inicio */
+    width: 80%;
+    max-width: 200px; /* Ajustado para ser más pequeño que los de la home */
+    padding: 15px 0;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centra el texto dentro del div */
+    display: flex; /* Para centrar el texto con flexbox */
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.login-button {
+    margin-top: 30px; /* Espacio adicional arriba del botón de login */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 480px) {
+    .page-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .login-form-container {
+        width: 95%;
+        height: 95%;
+        max-width: none; /* Elimina el max-width en móviles pequeños */
+        max-height: none;
+        border-radius: 50%; /* Sigue siendo circular */
+    }
+
+    .login-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .input-group label {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+
+    .action-button {
+        padding: 12px 0;
+        font-size: 1.1em;
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Agenda</title>
+    <link rel="stylesheet" href="style/agenda_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-medium circle-top-left"></div>
+        <!-- Gran círculo morado en la parte inferior -->
+        <div class="circle circle-large circle-bottom-right-large"></div>
+        <div class="circle circle-medium circle-bottom-left-medium"></div>
+
+        <!-- Header superior con fondo morado y curva -->
+        <header class="main-header">
+            <button class="icon-button back-button" aria-label="Volver atrás"><i class="fas fa-chevron-left"></i></button>
+            <h1 class="header-title">Agenda</h1>
+            <button class="icon-button menu-button" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+        </header>
+
+        <!-- Botón "Agendar Cita" flotante -->
+        <button class="action-button floating-button" id="agendarCitaBtn">Agendar Cita</button>
+
+        <!-- Contenido principal de la página de Agenda -->
+        <main class="main-content">
+            <!-- Sección de Calendario -->
+            <section class="calendar-section">
+                <h2 class="section-heading">Calendario:</h2>
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <span class="month-name">Julio</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Días de la semana -->
+                        <div class="day-name">L</div>
+                        <div class="day-name">M</div>
+                        <div class="day-name">M</div>
+                        <div class="day-name">J</div>
+                        <div class="day-name">V</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">D</div>
+
+                        <!-- Días del mes (ejemplo para Julio 2025) -->
+                        <!-- Los días se rellenarían dinámicamente con JS -->
+                        <div class="day-cell empty"></div>
+                        <div class="day-cell">1</div>
+                        <div class="day-cell">2</div>
+                        <div class="day-cell">3</div>
+                        <div class="day-cell selected">4</div> <!-- Día seleccionado -->
+                        <div class="day-cell">5</div>
+                        <div class="day-cell">6</div>
+                        <div class="day-cell">7</div>
+                        <div class="day-cell">8</div>
+                        <div class="day-cell">9</div>
+                        <div class="day-cell">10</div>
+                        <div class="day-cell">11</div>
+                        <div class="day-cell">12</div>
+                        <div class="day-cell">13</div>
+                        <div class="day-cell">14</div>
+                        <div class="day-cell">15</div>
+                        <div class="day-cell">16</div>
+                        <div class="day-cell">17</div>
+                        <div class="day-cell">18</div>
+                        <div class="day-cell">19</div>
+                        <div class="day-cell">20</div>
+                        <div class="day-cell">21</div>
+                        <div class="day-cell">22</div>
+                        <div class="day-cell">23</div>
+                        <div class="day-cell">24</div>
+                        <div class="day-cell">25</div>
+                        <div class="day-cell">26</div>
+                        <div class="day-cell">27</div>
+                        <div class="day-cell">28</div>
+                        <div class="day-cell">29</div>
+                        <div class="day-cell">30</div>
+                        <div class="day-cell">31</div>
+                        <div class="day-cell empty"></div>
+                        <div class="day-cell empty"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Citas programadas -->
+            <section class="appointments-section">
+                <h2 class="section-heading">Citas programadas</h2>
+                <div class="appointment-card">
+                    <div class="appointment-number">1</div>
+                    <div class="appointment-details">
+                        <p>Fecha: <span>00/00/00</span></p>
+                        <p>Hora: <span>12:00 p.m.</span></p>
+                    </div>
+                </div>
+                <div class="appointment-card">
+                    <div class="appointment-number">2</div>
+                    <div class="appointment-details">
+                        <p>Fecha: <span>00/00/00</span></p>
+                        <p>Hora: <span>12:00 p.m.</span></p>
+                    </div>
+                </div>
+                <!-- Puedes añadir más citas aquí -->
+            </section>
+        </main>
+    </div>
+
+    <!-- Ventana Modal para Datos de Cita -->
+    <div id="appointmentModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">Datos de su cita:</h2>
+            <div class="modal-form-group">
+                <label for="modalFecha">Fecha:</label>
+                <input type="text" id="modalFecha" readonly>
+            </div>
+            <div class="modal-form-group">
+                <label for="modalHora">Hora:</label>
+                <input type="text" id="modalHora" placeholder="Ej: 10:00 a.m.">
+            </div>
+            <div class="modal-form-group">
+                <label for="modalServicio">Servicio:</label>
+                <input type="text" id="modalServicio" placeholder="Ej: Manicura Clásica">
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-button modal-button-back" id="modalBackBtn">Atrás</button>
+                <button class="modal-button modal-button-confirm" id="modalConfirmBtn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/agenda_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Iniciar Sesión</title>
+    <link rel="stylesheet" href="style/sesion_style.css">
+    <!-- No necesitamos la fuente Dancing Script para esta página, pero si la usas en otros elementos, inclúyela. -->
+</head>
+<body>
+    <div class="page-container">
+        <!-- Círculos decorativos (reutilizados del diseño de la página de inicio) -->
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-xsmall circle-top-left"></div>
+
+        <!-- Gran círculo morado que contiene el formulario -->
+        <div class="login-form-container">
+            <h1 class="login-title">INICIO</h1>
+
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@ejemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+                </div>
+
+                <a href="#" class="forgot-password-link" id="forgotPasswordLink">Olvidé mi contraseña o usuario</a>
+
+                <!-- El botón de "INICIO" que se ve grande en el wireframe -->
+                <!-- Podría ser un botón de submit del formulario o un div con estilos de botón -->
+                <!-- Lo haremos un div para mantener la estética del wireframe sin ser un input submit por defecto -->
+                <div class="action-button login-button" id="loginBtn">INICIO</div>
+            </form>
+        </div>
+
+        <!-- Círculos decorativos adicionales en la parte inferior -->
+        <div class="circle circle-xsmall circle-bottom-left-corner"></div>
+    </div>
+
+    <script src="script/sesion_script.js"></script>
+</body>
+</html>

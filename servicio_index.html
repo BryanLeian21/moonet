@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Servicios</title>
+    <link rel="stylesheet" href="style/servicio_style.css">
+    <!-- Iconos de Font Awesome para el menú, la lupa, etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Círculos decorativos -->
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-medium circle-top-left"></div>
+
+        <!-- Header superior con fondo morado y curva -->
+        <header class="main-header">
+            <button class="icon-button back-button" aria-label="Volver atrás"><i class="fas fa-chevron-left"></i></button>
+            <h1 class="header-title">Servicios</h1>
+            <button class="icon-button menu-button" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+        </header>
+
+        <!-- Contenido principal debajo del header -->
+        <main class="main-content">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar content-search-bar">
+                <input type="text" placeholder="Buscar" class="search-input">
+                <button class="icon-button search-button" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Botones de navegación de la sección de servicios -->
+            <nav class="service-nav-buttons">
+                <button class="nav-button active">Catálogo</button>
+                <button class="nav-button">AR</button>
+            </nav>
+
+            <!-- Sección de Manicura con Carrusel -->
+            <section class="service-category-section">
+                <h2 class="section-title">Manicura</h2>
+                <p class="section-subtitle">Nuestros servicios de manicura</p>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="manicuraCarouselTrack">
+                        <!-- Tarjeta de Servicio 1 (Manicura) -->
+                        <div class="service-card" data-service-name="Manicura" data-service-description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut." data-service-price="15.00" data-service-promo-text="Servicio Básico">
+                            <img src="https://placehold.co/300x200/cccccc/333333?text=Manicura" alt="Manicura Clásica" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Manicura</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Servicio 2 (Acrílico/Polygel) -->
+                        <div class="service-card" data-service-name="Acrílico / Polygel" data-service-description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi." data-service-price="18.00" data-service-promo-text="RECUBRIMIENTO UÑA NATURAL">
+                            <img src="https://placehold.co/300x200/e0b28e/4a2c00?text=Acrilico" alt="Acrílico/Polygel" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Acrílico/Polygel</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Servicio 3 (Esmaltado / Se) -->
+                        <div class="service-card" data-service-name="Esmaltado / Se" data-service-description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut." data-service-price="12.50" data-service-promo-text="Color y Brillo">
+                            <img src="https://placehold.co/300x200/f0d0d0/800000?text=Esmaltado" alt="Esmaltado / Semi-permanente" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Esmaltado / Se</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Puedes añadir más tarjetas de servicio aquí -->
+                        <div class="service-card" data-service-name="Diseño AR" data-service-description="Experimenta diseños de uñas en Realidad Aumentada antes de aplicarlos. Personaliza tu estilo con la última tecnología." data-service-price="25.00" data-service-promo-text="Innovación">
+                            <img src="https://placehold.co/300x200/d0e0f0/000080?text=Diseño+AR" alt="Diseño de uñas AR" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Diseño AR</h3>
+                                <p class="service-description">Experimenta diseños de uñas en Realidad Aumentada.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Puedes añadir más secciones de categorías de servicios aquí (ej. "Pedicura", "Tratamientos", etc.) -->
+        </main>
+    </div>
+
+    <!-- Ventana Modal de Detalles del Servicio -->
+    <div id="serviceDetailModal" class="modal-overlay">
+        <div class="modal-content service-modal-content">
+            <h2 class="modal-service-name" id="modalServiceName">Acrílico / Polygel</h2>
+            <img src="https://placehold.co/300x200/e0b28e/4a2c00?text=Acrilico" alt="Imagen del Servicio" class="modal-service-image" id="modalServiceImage">
+            <p class="modal-service-description" id="modalServiceDescription">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            
+            <div class="promotion-badge">
+                <span class="promotion-price" id="modalServicePrice">$18,00</span>
+                <span class="promotion-subtitle" id="modalServicePromoText">RECUBRIMIENTO UÑA NATURAL</span>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="modal-button modal-button-back" id="modalBackServiceBtn">Atrás</button>
+                <button class="modal-button modal-button-more-info" id="modalMoreInfoServiceBtn">Mas Info.</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/servicio_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Registro</title>
+    <link rel="stylesheet" href="style/registro_style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Círculos decorativos (reutilizados del diseño de la página de inicio) -->
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-xsmall circle-top-left"></div>
+        <div class="circle circle-xsmall circle-bottom-left-corner"></div>
+
+        <!-- Gran círculo morado que contiene el formulario de registro -->
+        <div class="register-form-container">
+            <h1 class="register-title">Registro</h1>
+
+            <form id="registerForm" class="register-form">
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Ej: 0991234567" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Crea tu contraseña" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repite tu contraseña" required>
+                </div>
+
+                <!-- El botón de registro no está explícitamente en el wireframe, pero es necesario -->
+                <!-- Lo añadiremos como un botón estándar para la funcionalidad -->
+                <button type="submit" class="action-button register-button">REGISTRARSE</button>
+
+                <a href="#" class="login-link" id="alreadyHaveAccountLink">Ya tengo Usuario</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="script/registro_script.js"></script>
+</body>
+</html>

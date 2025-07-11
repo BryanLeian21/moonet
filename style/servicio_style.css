@@ -1,0 +1,517 @@
+/* Variables CSS para colores (reutilizadas de páginas anteriores) */
+:root {
+    --primary-purple: #6A3A9F; /* Morado oscuro principal */
+    --light-purple: #9D6ED9; /* Morado más claro para círculos */
+    --text-color-light: white; /* Color de texto para fondos morados */
+    --text-color-dark: #333; /* Color de texto oscuro para fondos claros */
+    --button-bg: white;
+    --button-text: var(--primary-purple);
+    --border-color: black;
+    --input-bg: white;
+    --input-border: #ccc;
+    --card-bg: white;
+    --card-border-radius: 15px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --active-nav-button-bg: var(--primary-purple); /* Fondo para el botón de navegación activo */
+    --active-nav-button-text: white;
+    --modal-overlay-bg: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente para el modal */
+    --modal-button-back-bg: #ccc; /* Color para el botón Atrás del modal */
+    --modal-button-more-info-bg: var(--primary-purple); /* Color para el botón Más Info del modal */
+    --promotion-badge-bg: var(--primary-purple); /* Fondo para el badge de promoción */
+    --promotion-text-color: white; /* Color de texto para el badge de promoción */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para simular un teléfono */
+    height: 90vh; /* Altura del contenedor */
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden; /* Recorta el contenido que se sale, importante para el carrusel */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para los círculos decorativos --- */
+.circle {
+    position: absolute;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(1px);
+    z-index: 1; /* Detrás del contenido principal */
+}
+
+.circle-large { width: 100px; height: 100px; }
+.circle-medium { width: 70px; height: 70px; }
+.circle-small { width: 50px; height: 50px; }
+
+/* Posicionamiento específico de los círculos */
+.circle-top-right { top: -20px; right: -20px; background-color: var(--primary-purple); }
+.circle-top-left { top: 10px; left: -30px; }
+
+
+/* --- Estilos para el Header Principal (reutilizado) --- */
+.main-header {
+    background-color: var(--primary-purple);
+    color: var(--text-color-light);
+    padding: 20px;
+    padding-bottom: 40px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-size: 1.8em;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* --- Contenido Principal (debajo del header) --- */
+.main-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 20px; /* Padding general para el contenido */
+    overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 0 0 20px 20px; /* Bordes inferiores redondeados */
+    box-sizing: border-box;
+}
+
+/* Barra de búsqueda dentro del contenido principal (reutilizada) */
+.content-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--input-bg);
+    border-radius: 30px;
+    padding: 8px 15px;
+    width: 90%; /* Ajusta el ancho */
+    max-width: 350px;
+    margin: 10px auto 30px auto; /* Centra y añade márgenes */
+    box-shadow: var(--shadow);
+}
+
+.content-search-bar .search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 1em;
+    color: var(--text-color-dark);
+}
+
+.content-search-bar .icon-button {
+    color: var(--text-color-dark); /* Iconos de búsqueda oscuros */
+    font-size: 1.2em;
+}
+
+/* --- Botones de navegación de la sección de servicios --- */
+.service-nav-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Espacio entre botones */
+    margin-bottom: 30px;
+}
+
+.service-nav-buttons .nav-button {
+    padding: 10px 25px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none; /* Sin borde por defecto */
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.service-nav-buttons .nav-button:hover {
+    background-color: #e0e0e0;
+}
+
+.service-nav-buttons .nav-button.active {
+    background-color: var(--active-nav-button-bg);
+    color: var(--active-nav-button-text);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más sutil para el activo */
+}
+
+.service-nav-buttons .nav-button.active:hover {
+    background-color: var(--active-nav-button-bg); /* No cambia al pasar el ratón si está activo */
+}
+
+
+/* --- Sección de Categoría de Servicio (ej. Manicura) --- */
+.service-category-section {
+    margin-bottom: 30px; /* Espacio entre categorías si hay más de una */
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.section-subtitle {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- Carrusel de Servicios (reutilizado de main_page.html) --- */
+.carousel-container {
+    width: 100%;
+    overflow-x: scroll; /* Permite el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+    scroll-snap-type: x mandatory; /* Ajusta el scroll a cada tarjeta */
+    padding-bottom: 10px; /* Espacio para la barra de scroll */
+}
+
+.carousel-track {
+    display: flex; /* Coloca las tarjetas en una fila */
+    gap: 15px; /* Espacio entre las tarjetas */
+    padding-right: 20px; /* Para que la última tarjeta no se pegue al borde */
+    padding-left: 5px; /* Pequeño padding inicial */
+}
+
+.service-card {
+    flex: 0 0 auto; /* No crece, no se encoge, tamaño automático */
+    width: 250px; /* Ancho fijo de cada tarjeta */
+    background-color: var(--card-bg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Para que la imagen no se salga */
+    scroll-snap-align: start; /* Alinea el inicio de la tarjeta al inicio del scroll */
+    transition: transform 0.3s ease; /* Transición para efectos de hover/active */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+}
+
+.service-image {
+    width: 100%;
+    height: 150px; /* Altura fija de la imagen */
+    object-fit: cover; /* Cubre el área manteniendo la relación de aspecto */
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0; /* Bordes superiores redondeados */
+}
+
+.service-info {
+    padding: 15px;
+}
+
+.service-name {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.service-description {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.service-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.people-icon {
+    color: var(--primary-purple);
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+.plus-one-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-right: auto;
+}
+
+.add-to-cart-button {
+    background-color: var(--primary-purple);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #5a2f8a;
+}
+
+/* --- Estilos para la Ventana Modal de Servicio --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-modal-content {
+    background-color: var(--card-bg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative; /* Para el badge de promoción */
+}
+
+.modal-overlay.show .service-modal-content {
+    transform: translateY(0);
+}
+
+.modal-service-name {
+    font-size: 1.6em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.modal-service-image {
+    width: 100%;
+    height: 180px; /* Altura de la imagen en el modal */
+    object-fit: cover;
+    border-radius: var(--card-border-radius);
+    margin-bottom: 20px;
+}
+
+.modal-service-description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify; /* Justificado como en el wireframe */
+}
+
+.promotion-badge {
+    background-color: var(--promotion-badge-bg);
+    color: var(--promotion-text-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: inline-block; /* Para que ocupe solo el ancho necesario */
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Posicionamiento flotante */
+    top: 220px; /* Ajusta para que quede sobre la imagen */
+    right: 30px; /* Ajusta la posición */
+    text-align: right;
+    line-height: 1.2;
+}
+
+.promotion-price {
+    font-size: 1.6em;
+    font-weight: bold;
+    display: block; /* Para que el precio esté en su propia línea */
+}
+
+.promotion-subtitle {
+    font-size: 0.7em;
+    opacity: 0.8;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.modal-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--shadow);
+    flex-grow: 1;
+    max-width: 150px;
+}
+
+.modal-button-back {
+    background-color: var(--modal-button-back-bg);
+    color: var(--text-color-dark);
+}
+
+.modal-button-back:hover {
+    background-color: #b0b0b0;
+    transform: translateY(-2px);
+}
+
+.modal-button-more-info {
+    background-color: var(--modal-button-more-info-bg);
+    color: var(--text-color-light);
+}
+
+.modal-button-more-info:hover {
+    background-color: #5a2f8a;
+    transform: translateY(-2px);
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 480px) {
+    .page-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .main-header {
+        padding: 15px;
+        padding-bottom: 30px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+
+    .header-title {
+        font-size: 1.6em;
+    }
+
+    .icon-button {
+        font-size: 1.3em;
+        padding: 5px 8px;
+    }
+
+    .content-search-bar {
+        width: 95%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .content-search-bar .search-input {
+        font-size: 0.95em;
+    }
+
+    .service-nav-buttons {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .service-nav-buttons .nav-button {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+
+    .main-content {
+        padding: 20px 15px 15px;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    .section-subtitle {
+        font-size: 0.8em;
+    }
+
+    .service-card {
+        width: 220px; /* Ajusta el ancho de las tarjetas en móviles */
+    }
+
+    /* Modal responsivo */
+    .service-modal-content {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    .modal-service-name {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .modal-service-image {
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .modal-service-description {
+        font-size: 0.85em;
+        margin-bottom: 15px;
+    }
+
+    .promotion-badge {
+        padding: 8px 12px;
+        top: 180px; /* Ajusta la posición en móviles */
+        right: 15px;
+    }
+
+    .promotion-price {
+        font-size: 1.4em;
+    }
+
+    .promotion-subtitle {
+        font-size: 0.6em;
+    }
+
+    .modal-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

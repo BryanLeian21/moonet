@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Centro de Ayuda</title>
+    <link rel="stylesheet" href="style/ayuda_style.css">
+    <!-- Iconos de Font Awesome para los botones de navegación y los acordeones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Círculos decorativos (puedes ajustar su posición y tamaño) -->
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-medium circle-top-left"></div>
+
+        <!-- Header superior con fondo morado y curva -->
+        <header class="main-header">
+            <button class="icon-button back-button" aria-label="Volver atrás"><i class="fas fa-chevron-left"></i></button>
+            <h1 class="header-title">Centro de ayuda</h1>
+            <button class="icon-button menu-button" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+        </header>
+
+        <!-- Contenido principal de la página de Ayuda -->
+        <main class="main-content">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar content-search-bar">
+                <input type="text" placeholder="Buscar" class="search-input">
+                <button class="icon-button search-button" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Sección de Preguntas Frecuentes -->
+            <section class="faq-section">
+                <h2 class="section-heading">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Preguntas frecuentes sobre el servicio y su resultado</p>
+
+                <!-- Acordeón 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" id="faq1Header">
+                        <span>¿Cómo puedo utilizar la función RA?</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content" id="faq1Content">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    </div>
+                </div>
+
+                <!-- Acordeón 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" id="faq2Header">
+                        <span>¿Cómo puedo pagar desde la aplicación?</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content" id="faq2Content">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                    </div>
+                </div>
+
+                <!-- Puedes añadir más acordeones aquí -->
+                <div class="accordion-item">
+                    <button class="accordion-header" id="faq3Header">
+                        <span>¿Qué servicios ofrece MooNath?</span>
+                        <i class="fas fa-plus accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content" id="faq3Content">
+                        <p>Ofrecemos una amplia gama de servicios de belleza, incluyendo manicura, pedicura, soft gel, diseños personalizados y experiencias de Realidad Aumentada para probar estilos antes de aplicarlos.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script/ayuda_script.js"></script>
+</body>
+</html>

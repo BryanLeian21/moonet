@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Menú Principal</title>
+    <link rel="stylesheet" href="style/paginap_style.css">
+    <!-- Iconos de Font Awesome para el menú y la lupa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Círculos decorativos -->
+        <div class="circle circle-small circle-top-right"></div>
+        <div class="circle circle-medium circle-top-left"></div>
+
+        <!-- Header superior con fondo morado y curva -->
+        <header class="main-header">
+            <p class="welcome-message">¡Hola Tatiana!</p>
+            <h1 class="main-title">Menú Principal</h1>
+            <div class="search-bar">
+                <button class="icon-button menu-button" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+                <input type="text" placeholder="Buscar" class="search-input">
+                <button class="icon-button search-button" aria-label="Buscar"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <!-- Contenido principal debajo del header -->
+        <main class="main-content">
+            <!-- Botones de navegación principales -->
+            <nav class="main-nav-buttons">
+                <button class="nav-button">Servicios</button>
+                <button class="nav-button">Agenda</button>
+                <button class="nav-button">Ayuda</button>
+            </nav>
+
+            <!-- Sección de Servicios Estrella con Carrusel -->
+            <section class="star-services-section">
+                <h2 class="section-title">Servicios Estrella</h2>
+                <p class="section-subtitle">Recomendados por nuestros trabajadores</p>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Tarjeta de Servicio 1 -->
+                        <div class="service-card">
+                            <img src="https://placehold.co/300x200/cccccc/333333?text=Uñas+1" alt="Uñas decoradas" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Manicura Clásica</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Servicio 2 (Soft Gel) -->
+                        <div class="service-card">
+                            <img src="https://placehold.co/300x200/e0b28e/4a2c00?text=Soft+Gel" alt="Uñas Soft Gel" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Soft Gel</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta de Servicio 3 (Pedicura) -->
+                        <div class="service-card">
+                            <img src="https://placehold.co/300x200/f0d0d0/800000?text=Pedicura" alt="Pedicura" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Pedicura P</h3>
+                                <p class="service-description">Lorem ipsum dolor sit amet, consectetuer.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Puedes añadir más tarjetas de servicio aquí -->
+                        <div class="service-card">
+                            <img src="https://placehold.co/300x200/d0e0f0/000080?text=Diseño+AR" alt="Diseño de uñas AR" class="service-image">
+                            <div class="service-info">
+                                <h3 class="service-name">Diseño AR</h3>
+                                <p class="service-description">Experimenta diseños de uñas en Realidad Aumentada.</p>
+                                <div class="service-meta">
+                                    <div class="people-icon"><i class="fas fa-users"></i></div>
+                                    <span class="plus-one-text">+1</span>
+                                    <button class="add-to-cart-button"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Enlaza nuestro archivo JavaScript -->
+    <script src="script/paginap_script.js"></script>
+</body>
+</html>

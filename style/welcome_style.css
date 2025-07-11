@@ -1,0 +1,105 @@
+/* Variables CSS para colores (reutilizadas de páginas anteriores) */
+:root {
+    --primary-purple: #6A3A9F; /* Morado oscuro principal */
+    --light-purple: #9D6ED9; /* Morado más claro para círculos */
+    --text-color-light: white; /* Color de texto para el fondo morado */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Fondo de respaldo si el contenedor no cubre todo */
+    overflow: hidden;
+}
+
+/* Contenedor principal de la página de bienvenida */
+.welcome-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: var(--primary-purple); /* Fondo morado principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para los círculos que se salen */
+}
+
+/* Estilos base para los círculos decorativos */
+.circle {
+    position: absolute;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(2px); /* Un poco más de blur para un efecto más suave */
+    z-index: 1; /* Asegura que estén detrás del contenido principal */
+}
+
+/* Tamaños y posicionamiento de los círculos */
+.circle-large { width: 200px; height: 200px; }
+.circle-medium { width: 150px; height: 150px; }
+.circle-small { width: 100px; height: 100px; }
+
+.circle-top-left { top: -50px; left: -50px; }
+.circle-top-right { top: 20px; right: 20px; background-color: var(--primary-purple); } /* Un círculo más oscuro */
+.circle-bottom-left { bottom: -70px; left: -30px; }
+.circle-bottom-right { bottom: 10px; right: -60px; background-color: var(--light-purple); }
+
+
+/* Contenido principal de texto */
+.welcome-content {
+    text-align: center;
+    color: var(--text-color-light); /* Texto blanco */
+    z-index: 2; /* Asegura que el texto esté por encima de los círculos */
+    padding: 20px;
+}
+
+.greeting-text {
+    font-size: 4em; /* Tamaño grande para "Hola..." */
+    margin-bottom: 0; /* Elimina margen inferior por defecto */
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.user-name {
+    font-size: 3em; /* Tamaño grande para el nombre */
+    margin-top: 0; /* Elimina margen superior por defecto */
+    font-weight: normal;
+    font-style: italic; /* Estilo cursiva para el nombre */
+    opacity: 0.9;
+}
+
+.thank-you-message {
+    font-size: 1.5em; /* Tamaño para el mensaje de agradecimiento */
+    margin-top: 30px; /* Espacio entre el nombre y el mensaje */
+    opacity: 0.8;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 480px) {
+    .greeting-text {
+        font-size: 3em;
+    }
+
+    .user-name {
+        font-size: 2.2em;
+    }
+
+    .thank-you-message {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    /* Ajuste de círculos para pantallas muy pequeñas */
+    .circle-large { width: 150px; height: 150px; }
+    .circle-medium { width: 100px; height: 100px; }
+    .circle-small { width: 70px; height: 70px; }
+
+    .circle-top-left { top: -30px; left: -30px; }
+    .circle-top-right { top: 10px; right: 10px; }
+    .circle-bottom-left { bottom: -50px; left: -10px; }
+    .circle-bottom-right { bottom: 5px; right: -40px; }
+}

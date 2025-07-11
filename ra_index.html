@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MooNath - Prototipo AR</title>
+    <link rel="stylesheet" href="style/ra_style.css">
+    <!-- Iconos de Font Awesome para los botones de navegación (si se necesitan) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="ar-container">
+        <!-- Elemento de video para mostrar la transmisión de la cámara -->
+        <video id="cameraFeed" autoplay playsinline></video>
+
+        <!-- Contenedor para los botones en la parte inferior -->
+        <div class="button-container">
+            <button class="ar-button" id="scanButton">Escanear</button>
+            <button class="ar-button" id="backButton">Atras</button>
+        </div>
+
+        <!-- Mensaje de "Estamos trabajando en ello" (inicialmente oculto) -->
+        <div class="message-overlay" id="workingMessage">
+            <p>Estamos trabajando en ello</p>
+        </div>
+    </div>
+
+    <script src="script/ra_script.js"></script>
+</body>
+</html>
