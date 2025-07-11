@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Botón de navegación: "${section}" clickeado.`);
 
             if (section === 'Servicios') {
-                window.location.href = 'services_page.html'; // Navega a la página de servicios
+                window.location.href = 'servicio_index.html'; // Navega a la página de servicios
             } else if (section === 'Agenda') {
-                window.location.href = 'agenda.html'; // Navega a la página de agenda
+                window.location.href = 'agenda_index.html'; // Navega a la página de agenda
             } else if (section === 'Ayuda') {
-                window.location.href = 'help_center.html'; // Navega a la página de ayuda
+                window.location.href = 'ayuda_index.html'; // Navega a la página de ayuda
             }
         });
     });

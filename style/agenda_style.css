@@ -100,12 +100,12 @@ body {
 /* --- Botón "Agendar Cita" flotante --- */
 .floating-button {
     position: absolute;
-    top: 150px; /* Ajusta la posición vertical */
+    top: 120px; /* Ajusta la posición vertical */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3; /* Asegura que esté por encima de todo */
     width: 60%; /* Ancho del botón */
-    max-width: 200px;
+    max-width: 250px;
     padding: 12px 0;
     background-color: var(--button-bg);
     color: var(--button-text);
