@@ -351,7 +351,7 @@ body {
 .promotion-badge {
     background-color: var(--promotion-badge-bg);
     color: var(--promotion-text-color);
-    padding: 1px 15px;
+    padding: 1px 15px 10px 10px; /* Ajusta el padding para que se vea bien */
     border-radius: 10px;
     display: inline-block; /* Para que ocupe solo el ancho necesario */
     margin-bottom: 25px;
@@ -497,7 +497,7 @@ body {
     }
 
     .promotion-badge {
-        padding: 8px 12px;
+        padding: 1px 12px;
         top: 180px; /* Ajusta la posición en móviles */
         right: 15px;
     }
