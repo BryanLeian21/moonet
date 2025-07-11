@@ -1,12 +1,12 @@
 /* Variables CSS para colores */
 :root {
-    --primary-purple: #6A3A9F; /* Un morado oscuro similar al del wireframe */
-    --light-purple: #9D6ED9; /* Un morado más claro para los círculos */
+    --primary-purple: #2A1459; /* Un morado oscuro similar al del wireframe */
+    --light-purple: #9C68FF; /* Un morado más claro para los círculos */
+    --moonath-purple: #8A6FCF; /* Morado específico para MooNath */
     --button-bg: white;
     --button-text: var(--primary-purple);
     --border-color: black;
     --text-color: #555; /* Color para el texto general si lo hay */
-    --moonath-purple: #8A6FCF; /* Morado específico para MooNath */
     --guest-link-color: white;
 }
 
@@ -44,13 +44,13 @@ body {
     position: absolute;
     background-color: var(--light-purple);
     border-radius: 50%;
-    opacity: 0.7; /* Ligeramente transparentes */
-    filter: blur(1px); /* Suaviza los bordes */
+    opacity: 1; /* Ligeramente transparentes */
+    filter: blur(0.5px); /* Suaviza los bordes */
 }
 
-.circle-large { width: 100px; height: 100px; }
-.circle-medium { width: 70px; height: 70px; }
-.circle-small { width: 50px; height: 50px; }
+.circle-large { width: 30px; height: 30px; }
+.circle-medium { width: 25px; height: 25px; }
+.circle-small { width: 35px; height: 35px; }
 .circle-xsmall { width: 30px; height: 30px; }
 
 /* Posicionamiento específico para cada círculo */
@@ -85,9 +85,9 @@ body {
 /* --- Estilos para la sección inferior (morada) --- */
 .bottom-section {
     width: 100%;
-    background-color: var(--primary-purple);
-    border-top-left-radius: 80px; /* Curva superior izquierda */
-    border-top-right-radius: 80px; /* Curva superior derecha */
+    background-color: var(--light-purple);
+    border-top-left-radius: 50%; /* Curva superior izquierda */
+    border-top-right-radius: 50%; /* Curva superior derecha */
     padding: 40px 20px 30px; /* Espaciado interno */
     box-sizing: border-box;
     display: flex;

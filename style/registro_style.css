@@ -1,8 +1,8 @@
 /* Variables CSS para colores (reutilizadas de páginas anteriores) */
 :root {
-    --primary-purple: #6A3A9F; /* Morado oscuro principal */
-    --light-purple: #9D6ED9; /* Morado más claro para círculos */
-    --moonath-purple: #8A6FCF; /* Morado específico para elementos de texto/logo */
+    --primary-purple: #2A1459; /* Un morado oscuro similar al del wireframe */
+    --light-purple: #9C68FF; /* Un morado más claro para los círculos */
+    --moonath-purple: #8A6FCF; /* Morado específico para MooNath */
     --button-bg: white; /* Fondo de los botones */
     --button-text: var(--primary-purple); /* Color del texto de los botones */
     --border-color: black; /* Color del borde principal del contenedor */

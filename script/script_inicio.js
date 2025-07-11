@@ -1,5 +1,4 @@
-// script_inicio.js
-// script_inicio.js - Maneja la lógica de la página de inicio
+// script/inicio_script.js - Maneja la lógica de la página de inicio
 
 document.addEventListener('DOMContentLoaded', () => {
     const inicioBtn = document.getElementById('inicioBtn');
@@ -18,15 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         registrarseBtn.addEventListener('click', (event) => {
             event.preventDefault();
             console.log('Botón "REGISTRARSE" clickeado. Navegando a registro_index.html');
-            window.location.href = 'registro_index.html'; // Navega a la página de registro
+            window.location.href = 'paginap_index.html'; // Navega a la página de registro
         });
     }
 
     if (continuarSinRegistroLink) {
         continuarSinRegistroLink.addEventListener('click', (event) => {
             event.preventDefault();
-            console.log('Enlace "Continuar sin Registro" clickeado. Navegando a paginap_index.html (modo invitado)');
-            window.location.href = 'paginap_index.html'; // Navega a la página del menú principal como invitado
+            console.log('Enlace "Continuar sin Registro" clickeado. Navegando a welcome_index.html');
+            // Redirige a la página de bienvenida
+            window.location.href = 'welcome_index.html';
         });
     }
 

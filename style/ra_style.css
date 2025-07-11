@@ -1,6 +1,8 @@
 /* Variables CSS (puedes reutilizar las de tus otras páginas si las tienes centralizadas) */
 :root {
-    --primary-purple: #6A3A9F;
+    --primary-purple: #2A1459; /* Un morado oscuro similar al del wireframe */
+    --light-purple: #9C68FF; /* Un morado más claro para los círculos */
+    --moonath-purple: #8A6FCF; /* Morado específico para MooNath */
     --button-bg: white;
     --button-text: var(--primary-purple);
     --message-bg: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente para el mensaje */
