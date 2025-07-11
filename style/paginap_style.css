@@ -62,7 +62,7 @@ body {
 
 /* --- Estilos para el Header Principal --- */
 .main-header {
-    background-color: var(--primary-purple);
+    background-color: var(--light-purple);
     color: var(--text-color-light);
     padding: 20px;
     padding-bottom: 50px; /* Espacio extra para la curva */
