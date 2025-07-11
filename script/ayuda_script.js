@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuButton.addEventListener('click', () => {
             console.log('Botón "Menú" clickeado.');
             alert('Abriendo el menú lateral / Navegando al menú principal...');
-            // window.location.href = 'main_page.html'; // Ejemplo
+            window.location.href = 'paginap_index.html'; // Navega a la página del menú principal
         });
     }
 

@@ -1,47 +1,34 @@
-// script.js
+// script_inicio.js
+// script_inicio.js - Maneja la lógica de la página de inicio
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Obtener referencias a los botones y el enlace por sus IDs
     const inicioBtn = document.getElementById('inicioBtn');
     const registrarseBtn = document.getElementById('registrarseBtn');
     const continuarSinRegistroLink = document.getElementById('continuarSinRegistroLink');
 
-    // --- Event Listeners para los botones ---
-
     if (inicioBtn) {
         inicioBtn.addEventListener('click', (event) => {
-            event.preventDefault(); // Previene el comportamiento por defecto del botón
-            console.log('Botón "INICIO" clickeado.');
-            // Aquí puedes añadir la lógica para navegar a la página de inicio
-            // window.location.href = 'inicio.html'; // Ejemplo de redirección
-            alert('Navegando a la página de Inicio...'); // Para la demo
+            event.preventDefault();
+            console.log('Botón "INICIO" clickeado. Navegando a sesion_index.html');
+            window.location.href = 'sesion_index.html'; // Navega a la página de inicio de sesión
         });
     }
 
     if (registrarseBtn) {
         registrarseBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            console.log('Botón "REGISTRARSE" clickeado.');
-            // Aquí puedes añadir la lógica para navegar a la página de registro
-            // window.location.href = 'registro.html'; // Ejemplo de redirección
-            alert('Navegando a la página de Registro...'); // Para la demo
+            console.log('Botón "REGISTRARSE" clickeado. Navegando a registro_index.html');
+            window.location.href = 'registro_index.html'; // Navega a la página de registro
         });
     }
 
     if (continuarSinRegistroLink) {
         continuarSinRegistroLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Previene el comportamiento por defecto del enlace
-            console.log('Enlace "Continuar sin Registro" clickeado.');
-            // Aquí puedes añadir la lógica para el modo invitado
-            // window.location.href = 'dashboard-guest.html'; // Ejemplo de redirección
-            alert('Continuando en modo invitado...'); // Para la demo
+            event.preventDefault();
+            console.log('Enlace "Continuar sin Registro" clickeado. Navegando a paginap_index.html (modo invitado)');
+            window.location.href = 'paginap_index.html'; // Navega a la página del menú principal como invitado
         });
     }
-
-    // --- Lógica adicional (ej. animación de círculos, si se desea) ---
-    // Puedes añadir una pequeña animación a los círculos si quieres que se muevan.
-    // Esto sería más avanzado y requeriría CSS keyframes o una librería JS como GreenSock.
-    // Por ahora, los dejaremos estáticos como en el wireframe.
 
     console.log('Página de inicio cargada correctamente.');
 });
