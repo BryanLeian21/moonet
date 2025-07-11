@@ -1,7 +1,7 @@
 /* Variables CSS para colores (reutilizadas de páginas anteriores) */
 :root {
-    --primary-purple:  #9C68FF; /* Un morado oscuro similar al del wireframe */
-    --light-purple: #2A1459; /* Un morado más claro para los círculos */
+    --primary-purple: #2A1459; /* Un morado oscuro similar al del wireframe */
+    --light-purple: #9C68FF; /* Un morado más claro para los círculos */
     --moonath-purple: #8A6FCF; /* Morado específico para MooNath */
     --text-color-light: white; /* Color de texto para fondos morados */
     --text-color-dark: #333; /* Color de texto oscuro para fondos claros */

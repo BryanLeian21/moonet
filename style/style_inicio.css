@@ -58,7 +58,7 @@ body {
 .circle-top-left { top: 12%; left: 10%; }
 .circle-center-right { top: 35%; right: 5%; }
 .circle-bottom-left { top: 60%; left: 5%; }
-.circle-mid-right { top: 40%; right: 30%; background-color: var(--moonath-purple); }
+.circle-mid-right { top: 50%; right: 30%; background-color: var(--moonath-purple); }
 
 
 /* --- Estilos para la sección del logo --- */
